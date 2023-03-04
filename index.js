@@ -21,7 +21,7 @@ connection.once("open", () => {
 
 const cityRouter = require("./routes/cityname");
 
-app.use("/", cityRouter);
+app.use("/city", cityRouter);
 
 app.get("/", (req, res) => res.send("Hello Cities!"));
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

@@ -4,7 +4,7 @@ const CityName = require("../models/city.model");
 
 router.route("/").get((req, res) => {
   CityName.find()
-    .then((names) => res.json(names))
+    .then((names) => res.json(names[Math.floor(Math.random() * names.length)]))
     .catch((err) => res.status(400).json("Error:" + err));
 });
 
